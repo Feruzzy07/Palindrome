@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Palindrome Checker
+  form(method="POST" action="/")
+    label(for="userText") Enter your text here:
+    br
+    input(type="text" id="userText" name="userText" value=`${phrase}`)
+    br
+    br
+    button(type="submit") Submit
+  if message
+    p=message
+  h4 Examples of Palindromes
+  h4 racecar is a palindrome since it spelt backwards is racecar
+  h4 Car is not a palindrome since isnt spelt the same backwards, it spells rac
